@@ -5,6 +5,7 @@
     <vendor>alexpl292</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.go</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.alexpl292.ijgo.services.MyApplicationService"/>
@@ -15,4 +16,8 @@
         <listener class="com.github.alexpl292.ijgo.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <projectListeners>
+        <listener class="com.github.alexpl292.ijgo.listeners.GoTemplateManagerListener"
+                  topic="com.intellij.codeInsight.template.TemplateManagerListener"/>
+    </projectListeners>
 </idea-plugin>
